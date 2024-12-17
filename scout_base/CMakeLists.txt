@@ -26,14 +26,16 @@ find_package(nav_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
-
+find_package(tf2_geometry_msgs REQUIRED)
 find_package(scout_msgs REQUIRED)
 find_package(ugv_sdk REQUIRED)
 
 include_directories(
   include
 )
-
+include_directories(/opt/ros/humble/include/tf2_geometry_msgs)
+include_directories(/opt/ros/humble/include/tf2)
+include_directories(/opt/ros/humble/include/tf2_ros)
 set(DEPENDENCIES
   "geometry_msgs"
   "nav_msgs"
